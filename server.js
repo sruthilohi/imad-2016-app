@@ -26,7 +26,7 @@ var title=data.title;
 var date=data.date;
 var heading=data.heading;
 var content =data.content;
-var templatehtml= `
+var htmltemplate= `
      <html>
   <head>
       <title>
@@ -67,11 +67,11 @@ return htmltemplate;
 }
 
 app.get('/', function (req, res) {
-  res.send(createtemplate(articleone));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createtemplate(articleone));
 });
 app.get('/article-two', function(req,res){
  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
