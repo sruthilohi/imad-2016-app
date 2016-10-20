@@ -25,12 +25,20 @@ var articles= {
                 },
    ' article-three':{
         
-         title:'Article three  | sruthi', 
+       /*  title:'Article three  | sruthi', 
          heading:'Article three',
          date:'sep 25 2016',
          content: `        <p>
                           This is the content of my third article.
-                     </p>`
+                     </p>`*/
+                     
+                     
+            title:'Article one  | sruthi', 
+            heading:'Article one',
+            date:'sep 15 2016',
+            content: `        <p>
+                          This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
+                    </p> `
         
                 }
 };
