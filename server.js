@@ -41,9 +41,7 @@ var articles= {
                  content: `        <p>
                             This is the content of my second article.
                      </p>
-                     <p>
-                            This is the content of my third article.first article.
-                     </p>`
+                    `
 
         }
               
