@@ -23,7 +23,7 @@ var articles= {
                     </p>`
         
                 },
-    'article-three':{
+   ' article-three':{
         
          title:'Article three  | sruthi', 
          heading:'Article three',
