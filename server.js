@@ -40,9 +40,9 @@ var articles= {
          title:'Article two  | sruthi', 
          heading:'Article two',
          date:'sep 2 2016',
-         content: `        <p>
+         content:    ` '   <p>
                           This is the content of my second article.
-                     </p>`
+                     </p>'`
                      
                      
            
