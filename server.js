@@ -17,13 +17,10 @@ var articles= {
                     </p>
                     <p>
                           This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                    </p>
-                    <p>
-                          This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
                     </p>`
         
                 },
-   ' article-three':{
+   ' article-three': {
         
        /*  title:'Article three  | sruthi', 
          heading:'Article three',
