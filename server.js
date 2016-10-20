@@ -11,7 +11,7 @@ var articles= {
     'article-one': {
            title:'Article one  | sruthi', 
             heading:'Article one',
-            date:'sep 15 2016',
+            date:'sep 1 2016',
             content: `        <p>
                           This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
                     </p>
@@ -32,22 +32,22 @@ var articles= {
                             This is the content of my third article.first article.
                      </p>`
 
-        }
-};              
+        },
+              
                 
-  /* ' article-three': {
+   ' article-two': {
         
-         title:'Article three  | sruthi', 
-         heading:'Article three',
-         date:'sep 25 2016',
+         title:'Article two  | sruthi', 
+         heading:'Article two',
+         date:'sep 2 2016',
          content: `        <p>
-                          This is the content of my third article.
+                          This is the content of my second article.
                      </p>`
                      
                      
            
                 } 
-}; */
+}; 
 
 
 function createtemplate(data){
