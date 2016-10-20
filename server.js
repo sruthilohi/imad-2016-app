@@ -22,7 +22,7 @@ var articles= {
                 },
                 
       'article-three': {
-                title:'Article one  | sruthi', 
+                title:'Article three  | sruthi', 
                  heading:'Article three',
                 date:'sep 5 2016',
                  content: `        <p>
@@ -33,9 +33,22 @@ var articles= {
                      </p>`
 
         },
+        
+        'article-two': {
+                title:'Article two  | sruthi', 
+                 heading:'Article two',
+                date:'sep 2 2016',
+                 content: `        <p>
+                            This is the content of my second article.
+                     </p>
+                     <p>
+                            This is the content of my third article.first article.
+                     </p>`
+
+        }
               
                 
-   ' article-two': {
+  /* ' article-two': {
         
          title:'Article two  | sruthi', 
          heading:'Article two',
@@ -46,7 +59,7 @@ var articles= {
                      
                      
            
-                } 
+                } */
 }; 
 
 
