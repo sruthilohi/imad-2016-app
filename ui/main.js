@@ -10,19 +10,40 @@ img.onclick= function(){
 //counter code
 
 var button=document.getElementById('counter');
-var counter=0;
+//var counter=0;
 button.onclick=function(){
     
     
-   // make a request to the counter end point
+   
+   //create a request object
+   
+   variable request= new xmlhttprequest();
     
    // capture the response and store it in a variable
+    request.onreadystatechange=function(){
+        if(request.readystate===xmlhttprequest.done){
+            //take some action
+            if(request.status===200){
+                 var counter=request.responsetext;
+                 var span= document.getElementById('count');
+
+                 span.innerHTML=(counter.toString());
+            }
+            
+        }
+        //not done yet
+    };
+    //make a request
+    request.open(get,'http://sruthi.imad.hasura.app.io',true);
+    request.send(null);
+    
     
     // render the variable in the correct span
-    counter=counter+1;
+   // counter=counter+1;
     
-   var span= document.getElementById('count');
+   //var span= document.getElementById('count');
 
-span.innerHTML=(counter.toString());
+//span.innerHTML=(counter.toString());
     
 };
+
