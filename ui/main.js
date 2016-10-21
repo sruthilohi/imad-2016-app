@@ -34,8 +34,9 @@ button.onclick = function(){
         //not done yet
     };
     //make a request
+    request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
     
-    request.open('get','http://sruthilohi.imad.hasura-app.io/counter',true);
+   // request.open('get','http://sruthilohi.imad.hasura-app.io/counter',true);
     request.send(null);
     
     
