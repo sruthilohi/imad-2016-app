@@ -34,7 +34,7 @@ button.onclick=function(){
         //not done yet
     };
     //make a request
-    request.open(get,'http://sruthi.imad.hasura.app.io',true);
+    request.open(get,'http://sruthi.imad.hasur-app.io/counter',true);
     request.send(null);
     
     
