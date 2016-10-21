@@ -8,8 +8,8 @@ img.onclick= function(){
  img.style.marginleft='100px';  
 }; */
 //counter code
-var counter=document.getElementById('counter');
-button.onclick=function(){
+//var counter=document.getElementById('counter');
+//button.onclick=function(){
     
     
     //make a request to the counter end point
@@ -18,9 +18,8 @@ button.onclick=function(){
     
     // render the variable in the correct span
     
-    counter =counter+1;
-   var span= document.getElementById('count');
-    span.innerhtml=counter.tostring();
+//   var span= document.getElementById('count');
+//span.innerhtml=counter.tostring();
 
     
-};
+//};
