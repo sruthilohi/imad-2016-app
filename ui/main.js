@@ -1,4 +1,4 @@
-console.log('Loaded!');
+//console.log('Loaded!');
  //change the text of the main text div
 //var element = document.getElementById('main-text'
 //);
@@ -11,13 +11,13 @@ img.onclick= function(){
 
 var button=document.getElementById('counter');
 //var counter=0;
-button.onclick=function(){
+button.onclick = function(){
     
     
    
    //create a request object
    
-   variable request= new xmlhttprequest();
+   var request= new xmlhttprequest();
     
    // capture the response and store it in a variable
     request.onreadystatechange=function(){
