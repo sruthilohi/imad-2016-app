@@ -110,6 +110,10 @@ return htmltemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var counter=0;
+app.get('/connter' ,function(req,res){
+    res.send(counter.tostring());
+});
 
 app.get('/:articlename', function(req,res){
     //articlename==article-one
