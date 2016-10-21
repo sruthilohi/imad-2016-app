@@ -17,7 +17,7 @@ button.onclick = function(){
    
    //create a request object
    
-   var request = new xmlhttprequest();
+   var request = new XMLHttpRequest();
     
    // capture the response and store it in a variable
     request.onreadystatechange = function(){
@@ -35,7 +35,7 @@ button.onclick = function(){
     };
     //make a request
     
-    request.open(get,'https://sruthilohi.imad.hasur-app.io/counter',true);
+    request.open(get,'http://sruthilohi.imad.hasura-app.io/counter',true);
     request.send(null);
     
     
