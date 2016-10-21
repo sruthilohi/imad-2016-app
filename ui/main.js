@@ -23,3 +23,4 @@ img.onclick= function(){
 
     
 //};
+//console.log(counter.toString());
