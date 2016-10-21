@@ -113,7 +113,7 @@ app.get('/', function (req, res) {
 var counter=0;
 app.get('/counter' , function(req,res){
     counter=counter+1;
-    res.send(counter);
+    res.send(tostring(counter));
 });
 
 app.get('/:articlename', function(req,res){
