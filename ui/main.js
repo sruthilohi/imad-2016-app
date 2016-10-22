@@ -36,8 +36,7 @@ button.onclick = function(){
     //make a request
     request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
     
-   // request.open('get','http://sruthilohi.imad.hasura-app.io/counter',true);
-    request.send(null);
+      request.send(null);
     
     
     // render the variable in the correct span
