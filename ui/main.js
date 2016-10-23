@@ -29,11 +29,11 @@ button.onclick = function(){
                  var span= document.getElementById('count');
 
                  span.innerHTML=counter.toString();
- //           }
+          }
             
-  //      }
+       }
         //not done yet
-    };
+            };
     //make a request
     
    request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
