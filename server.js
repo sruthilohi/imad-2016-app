@@ -123,7 +123,7 @@ app.get('/test-db' , function(req,res){
         res.status(500).send(err.toString());
         
     }  else {
-        res.send(JASON.stringify(result.rows));
+        res.send(JSON.stringify(value));
     } 
    });
    // return a response with result
@@ -139,7 +139,7 @@ counter=counter+1;
 res.send(counter.toString());
 });
 
-app.get('/:articlename', function(req,res){
+app.get('/articles/:articlename', function(req,res){
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
   var articlename=req.params.articlename;
