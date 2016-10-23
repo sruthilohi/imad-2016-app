@@ -4,6 +4,7 @@ var path = require('path');
 var pool = require('pg').pool;
 var app = express();
 app.use(morgan('combined'));
+
 var config = {
     user:'sruthilohi',
     database:'sruthilohi',
@@ -112,10 +113,19 @@ var htmltemplate= `
 `;
 return htmltemplate;
 }
+var pool = new Pool(config);
 
 app.get('/test-db' , function(req,res){
     
    //make a select request
+   pool.query=('SELECT * from test' , function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+        
+    }  else {
+        res.send(JASON.stringify(result));
+    } 
+   });
    // return a response with result
     
 });
