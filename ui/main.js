@@ -23,7 +23,7 @@ button.onclick = function(){
     request.onreadystatechange = function(){
         if(Request.readyState === XMLHttpRequest.DONE){
             //take some action
-            if(request.status ===200){
+            if(request.status === 200){
                  var counter = request.responseText;
                 // counter=counter+1;
                  var span = document.getElementById('count');
@@ -36,11 +36,9 @@ button.onclick = function(){
             };
     //make a request
     
-   request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
+   request.open('GET','http://sruthilohi.imad.hasura-app.io/counter', true);
     
       request.send(null);
-    
-    
     
     
 };
