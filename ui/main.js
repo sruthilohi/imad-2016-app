@@ -10,22 +10,22 @@ img.onclick= function(){
 //counter code
 
 var button=document.getElementById('counter');
-var counter=0;
+//var counter=0;
 button.onclick = function(){
     
     
    
    //create a request object
    
-  /* var request = new XMLHttpRequest();
+   var request = new XMLHttpRequest();
     
    // capture the response and store it in a variable
     request.onreadystatechange = function(){
         if(Request.readyState === XMLHttpRequest.DONE){
             //take some action
             if(request.status === 200){
-                 var counter = request.responseText;*/
-                 counter=counter+1;
+                 var counter = request.responseText;
+                // counter=counter+1;
                  var span= document.getElementById('count');
 
                  span.innerHTML=counter.toString();
@@ -35,19 +35,15 @@ button.onclick = function(){
         //not done yet
     };
     //make a request
- /*   request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
+    
+   request.open('GET', 'http://sruthilohi.imad.hasura-app.io/counter', true);
     
       request.send(null);
     
     
-    // render the variable in the correct span
-   // counter=counter+1;
     
-   //var span= document.getElementById('count');
-
-//span.innerHTML=(counter.toString());
     
-};*/
+};
 
 var nameInput=document.getElementById('name');
 var name = nameInput.value;
