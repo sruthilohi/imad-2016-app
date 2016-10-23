@@ -23,10 +23,10 @@ button.onclick = function(){
     request.onreadystatechange = function(){
         if(Request.readyState === XMLHttpRequest.DONE){
             //take some action
-            if(request.status === 200){
+            if(request.status ===304){
                  var counter = request.responseText;
                 // counter=counter+1;
-                 var span= document.getElementById('count');
+                 var span = document.getElementById('count');
 
                  span.innerHTML=counter.toString();
           }
