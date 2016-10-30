@@ -2,16 +2,16 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var pool = require('pg').pool;
-var app = express();
-app.use(morgan('combined'));
 
 var config = {
     user:'sruthilohi',
     database:'sruthilohi',
     host:'db.imad.hasura-app.io',
-    port:5432,
-    password:process.env.DB-DATABASE
+    port: '5432',
+    password: process.env.DB_PASSWORD
 };
+var app = express();
+app.use(morgan('combined'));
 
 var articles= {
     
@@ -113,20 +113,22 @@ var htmltemplate= `
 `;
 return htmltemplate;
 }
+
 var pool = new Pool(config);
 
 app.get('/test-db' , function(req,res){
     
    //make a select request
+    // return a response with result
    pool.query=('SELECT * from test' , function(err,result){
     if(err){
         res.status(500).send(err.toString());
         
     }  else {
-        res.send(JSON.stringify(value));
+        res.send(JSON.stringify(result));
     } 
    });
-   // return a response with result
+  
     
 });
 
