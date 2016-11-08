@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').Pool;
+var Pool = require('pg').Pool;
 
 var config = {
     user:'sruthilohi',
@@ -103,13 +103,13 @@ var htmltemplate= `
 return htmltemplate;
 }
 
-var pool = new Pool(config);
+var Pool = new Pool(config);
 
 app.get('/test-db' , function(req,res){
     
    //make a select request
     // return a response with result
-   pool.query=('SELECT * from test' , function(err,result){
+  Pool.query=('SELECT * from test' , function(err,result){
     if(err){
         res.status(500).send(err.toString());
         
@@ -135,7 +135,7 @@ app.get('/articles/:articlename', function(req,res){
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
  // var articlename = req.params.articlename;
-  pool.query=("select * from article where title = $1" , [req.params.articlename]  , function(err,result){
+  Pool.query=("select * from article where title = $1" , [req.params.articlename]  , function(err,result){
       if(err) {
           res.status(500).send(err.toString());
           
