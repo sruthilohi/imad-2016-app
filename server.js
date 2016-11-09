@@ -63,7 +63,8 @@ var title=data.title;
 var date=data.date;
 var heading=data.heading;
 var content =data.content;
-var htmltemplate= `
+
+/*var htmltemplate= `
      <html>
   <head>
       <title>
@@ -100,7 +101,7 @@ var htmltemplate= `
     
     
 `;
-return htmltemplate;
+return htmltemplate;*/
 }
 
 /*var Pool = new Pool(config);
