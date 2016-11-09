@@ -1,15 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool = require('pg').Pool;
+//var Pool = require('pg').Pool;
 
-var config = {
+/*var config = {
     user:'sruthilohi',
     database:'sruthilohi',
     host:'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
-};
+};*/
 var app = express();
 app.use(morgan('combined'));
 
@@ -65,7 +65,7 @@ var heading=data.heading;
 var content =data.content;
 
 
-/*var htmltemplate= `
+var htmltemplate= `
      <html>
   <head>
       <title>
@@ -102,7 +102,7 @@ var content =data.content;
     
     
 `;
-return htmltemplate;*/
+return htmltemplate;
 }
 
 /*var Pool = new Pool(config);
