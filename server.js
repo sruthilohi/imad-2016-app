@@ -131,11 +131,11 @@ res.send(counter.toString());
 });
 
 
-/*app.get('/:articlename', function (req, res) {
-    var articlename = rec.params.articlename;
+app.get('/:articleName', function (req, res) {
+    var articleName = rec.params.articleName;
     
-  res.send(createtemplate(articles[articlename]));
-});*/
+  res.send(createtemplate(articles[articleName]));
+});
 
 app.get('/articles/:articlename', function(req,res){
     
