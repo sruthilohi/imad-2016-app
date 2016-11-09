@@ -4,9 +4,9 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config = {
-    user:'sruthilohi',
-    database:'sruthilohi',
-    host:'db.imad.hasura-app.io',
+    user: 'sruthilohi',
+    database: 'sruthilohi',
+    host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
 };
@@ -111,7 +111,7 @@ app.get('/test-db', function(req,res){
     
    //make a select request
     // return a response with result
-  pool.query=('SELECT * from test' , function(err,result){
+  pool.query('SELECT * from test' , function(err,result){
     if(err){
         res.status(500).send(err.toString());
         
