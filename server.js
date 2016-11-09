@@ -137,7 +137,7 @@ res.send(counter.toString());
   res.send(createtemplate(articles[articlename]));
 });*/
 
-/*app.get('/articles/:articlename', function(req,res){
+app.get('/articles/:articlename', function(req,res){
     
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
@@ -156,7 +156,7 @@ res.send(counter.toString());
       }
   });
   
-});*/
+});
 
 
 app.get('/ui/style.css', function (req, res) {
