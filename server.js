@@ -105,18 +105,18 @@ var htmltemplate= `
 return htmltemplate;
 }
 
-var Pool = new Pool(config);
+var pool = new Pool(config);
 
 app.get('/test-db', function(req,res){
     
    //make a select request
     // return a response with result
-  Pool.query=('SELECT * from test' , function(err,result){
+  pool.query=('SELECT * from test' , function(err,result){
     if(err){
         res.status(500).send(err.toString());
         
     }  else {
-        res.send(JSON.stringify(result.rows));
+        res.send(JSON.stringify(result));
     } 
    });
   
@@ -144,7 +144,7 @@ app.get('/articles/:articlename', function(req,res){
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
  // var articlename = req.params.articlename;
-  Pool.query=("select * from article where title = $1" , [req.params.articlename]  , function(err,result){
+  pool.query=("select * from article where title = $1" , [req.params.articlename]  , function(err,result){
       if(err) {
           res.status(500).send(err.toString());
           
