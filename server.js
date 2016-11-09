@@ -129,9 +129,7 @@ app.get('/counter', function(req,res){
 counter=counter+1;
 res.send(counter.toString());
 });
-app.get('/journeytrack', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'journeytrack.html'));
-});
+
 app.get('/articles/:articlename', function(req,res){
     
     //articlename==article-one
