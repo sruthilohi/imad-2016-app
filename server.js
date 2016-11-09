@@ -105,7 +105,7 @@ return htmltemplate;
 
 var Pool = new Pool(config);
 
-app.get('/test-db' , function(req,res){
+app.get('/journeytrack' , function(req,res){
     
    //make a select request
     // return a response with result
