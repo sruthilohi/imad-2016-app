@@ -19,12 +19,12 @@ var articles= {
            title:'Article one  | sruthi', 
             heading:'Article one',
             date:'sep 1 2016',
-          /*  content: `        <p>
+          content: `        <p>
                           This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
                     </p>
                     <p>
                           This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.This is the content of my first article.
-                    </p>`*/
+                    </p>`
         
                 },
                 
@@ -62,7 +62,7 @@ function createtemplate(data){
 var title=data.title;
 var date=data.date;
 var heading=data.heading;
-//var content =data.content;
+var content =data.content;
 var htmltemplate= `
      <html>
   <head>
@@ -91,7 +91,7 @@ var htmltemplate= `
                   </div>
                   <div>
                       
-                   // ${content}
+                    ${content}
                   </div>
            </div>
   </body>
