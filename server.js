@@ -130,7 +130,14 @@ counter=counter+1;
 res.send(counter.toString());
 });
 
-app.get('/articles/:articlename', function(req,res){
+
+app.get('/:articlename', function (req, res) {
+    var articlename = rec.params.articlename;
+    
+  res.send(createtemplate(articles[articlename]));
+});
+
+/*app.get('/articles/:articlename', function(req,res){
     
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
@@ -149,7 +156,7 @@ app.get('/articles/:articlename', function(req,res){
       }
   });
   
-});
+});*/
 
 
 app.get('/ui/style.css', function (req, res) {
