@@ -103,7 +103,7 @@ var htmltemplate= `
 return htmltemplate;
 }
 
-var Pool = new Pool(config);
+/*var Pool = new Pool(config);
 
 app.get('/journeytrack' , function(req,res){
     
@@ -119,7 +119,7 @@ app.get('/journeytrack' , function(req,res){
    });
   
     
-});
+});*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -137,7 +137,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createtemplate(articles[articleName]));
 });
 
-app.get('/articles/:articlename', function(req,res){
+/*app.get('/articles/:articlename', function(req,res){
     
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
@@ -156,7 +156,7 @@ app.get('/articles/:articlename', function(req,res){
       }
   });
   
-});
+});*/
 
 
 app.get('/ui/style.css', function (req, res) {
