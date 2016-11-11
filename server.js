@@ -183,10 +183,10 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-/* pool.query('INSERT INTO comments (comment, date, article-id ) VALUES ($1, $2, $3)', [req.body.comments, new Date(), articleId ],  function(err) {
+ pool.query('INSERT INTO comments (comment, date, article-id ) VALUES ($1, $2, $3)', [req.body.comments, new Date(), articleId ],  function(err) {
     if (err) return onError(err);
 
-});*/
+});
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
