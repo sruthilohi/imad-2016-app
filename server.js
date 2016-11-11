@@ -95,6 +95,7 @@ var htmltemplate= `
                       
                     ${content}
                   </div>
+                  <hr/>
            </div>
   </body>
 </html> 
