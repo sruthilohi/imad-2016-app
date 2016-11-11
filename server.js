@@ -156,6 +156,7 @@ app.get('/articles/:articlename', function(req,res){
               res.status(404).send('article not found');
            }else {
                var articleData = result.rows[0];
+               var articleId = result.rows[0].id;
                 res.send(createtemplate(articleData));
            }
       }
@@ -182,7 +183,10 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+ pool.query('INSERT INTO comments (comment, date, article-id ) VALUES ($1, $2, $3)',[articleId, new Date(), req.body.comment],  function(err) {
+    if (err) return onError(err);
 
+});
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
