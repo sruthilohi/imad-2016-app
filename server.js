@@ -96,6 +96,8 @@ var htmltemplate= `
                     ${content}
                   </div>
                   <hr/>
+                  <input type="text" id=comments" placeholder="comment"/>
+                <input type="submit" id="submit_btn" value="submit"/>
            </div>
   </body>
 </html> 
