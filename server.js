@@ -183,7 +183,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
- pool.query('INSERT INTO comments (comment, date, article-id ) VALUES ($1, $2, $3)',[articleId, new Date(), req.body.comment],  function(err) {
+ pool.query('INSERT INTO comments (comment, date, article-id ) VALUES ($1, $2, $3)',[articleId, new Date(), req.body.comments],  function(err) {
     if (err) return onError(err);
 
 });
