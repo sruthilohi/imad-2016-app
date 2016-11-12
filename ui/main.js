@@ -26,6 +26,7 @@ button.onclick = function(){
             //take some action
             if(request.status === 200){
                  var counter = request.responseText;
+                 //render the variable in the correct span
                 // counter=counter+1;
                  var span = document.getElementById('count');
 
@@ -45,7 +46,7 @@ button.onclick = function(){
 };
 
 
-var nameInput=document.getElementById('name');
+/*var nameInput=document.getElementById('name');
 var name = nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick = function(){
@@ -59,5 +60,5 @@ submit.onclick = function(){
   }
   var ul= document.getElementById('namelist');
   ul.innerHTML = list;
-};
+};*/
 
