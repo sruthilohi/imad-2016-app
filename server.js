@@ -187,7 +187,7 @@ app.get('/ui/madi.png', function (req, res) {
     if (err) return onError(err);
 
 });*/
-pool.query('INSERT INTO comments ( article-id ) VALUES ($1)', [ articleId ],  function(err) {
+pool.query("INSERT INTO comments ( article-id ) VALUES ($1)", [ articleId ],  function(err) {
     if (err) return onError(err);
 
 });
