@@ -45,11 +45,9 @@ button.onclick = function(){
     
 };*/
 
+//submit username and password to login
 
 
-
-//var nameInput=document.getElementById('name');
-//var name = nameInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick = function(){
     
@@ -80,12 +78,12 @@ submit.onclick = function(){
         //not done yet
             };
     //make a request
-    var nameInput=document.getElementById('name');
-    var name = nameInput.value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
     
-   request.open('GET','http://sruthilohi.imad.hasura-app.io/submit-name?name=' + name, true);
+   request.open('POST','http://sruthilohi.imad.hasura-app.io/submit-name?name=' + name, true);
     
-      request.send(null);
+      request.send(JSON.stringify({username: username, password:password}));
     
     
     // make a request to the server and send the name
