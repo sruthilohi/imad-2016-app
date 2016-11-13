@@ -13,7 +13,7 @@ var config = {
 };
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyParser.JSON());
+app.use(bodyParser.json());
 /* var articles= {
     
     'article-one': {
@@ -130,7 +130,7 @@ app.post('/create-user', function(req,res){
         res.status(500).send(err.toString());
         
     }  else {
-        res.send('user sucessfully created :'+ username);
+        res.send('user sucessfully created :' + username);
     } 
         
     });
