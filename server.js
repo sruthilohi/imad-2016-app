@@ -119,10 +119,18 @@ app.get('/hash/:input', function(req,res){
    var hashedstring = hash(req.params.input,'this-is-a-random-string');
    res.send(hashedstring);
 });
-app.get('/create-user', function(req,res){
+app.post('/create-user', function(req,res){
+    var username = rec.body.username;
+    var password = rec.body.password;
     var salt = crypto.getRandomBytes(128).toString('hex');
     var dbstring = hash(password,salt); 
-    pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', (username,dbstring) , function(err,result){
+    pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username,dbstring] , function(err,result){
+        if(err){
+        res.status(500).send(err.toString());
+        
+    }  else {
+        res.send('user sucessfully created :'+ username);
+    } 
         
     });
 });
