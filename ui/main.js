@@ -83,7 +83,7 @@ submit.onclick = function(){
     console.log(password);
    request.open('POST','http://sruthilohi.imad.hasura-app.io/login', true);
     
-      request.send(JSON.strinfigyy({username: username, password:password}));
+      request.send(JSON.stringify({username: username, password:password}));
     
     
     // make a request to the server and send the name
