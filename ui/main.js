@@ -62,29 +62,28 @@ submit.onclick = function(){
             if (request.status === 200){
                 
                 //capture a list of names and render it as a list
-                var names = request.responseText;
-                names =JSON.parse(names);
-                var list='';
-                for(var i=0; i<names.length; i++){
-                  list += '<li>' + names[i] + '</li>';
+               consle.log('user logged in');
+               alert('logged in sucessfully');
+                } else if (request.status===403){
+                    alert('username/password is incorrect');
+                } else if (request.status===500){
+                    alert('something went wrong on the server');
                 }
-                var ul= document.getElementById('namelist');
-                ul.innerHTML = list;
-                
                
-          }
+               
+          
             
        }
         //not done yet
-            };
+ };
     //make a request
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     console.log(username);
     console.log(password);
-   request.open('POST','http://sruthilohi.imad.hasura-app.io/submit-name?name=' + name, true);
+   request.open('POST','http://sruthilohi.imad.hasura-app.io/login', true);
     
-      request.send(JSON.stringify({username: username, password:password}));
+      request.send(JSON.strinfigyy({username: username, password:password}));
     
     
     // make a request to the server and send the name
