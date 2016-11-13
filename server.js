@@ -119,6 +119,10 @@ app.get('/hash/:input', function(req,res){
    var hashedstring = hash(req.params.input,'this-is-a-random-string');
    res.send(hashedstring);
 });
+app.get('/create-user', function(req,res){
+    var salt = crypto.getRandomBytes(128).toString('hex');
+    var dbstring = hash(password,salt); 
+});
 
 app.get('/test-db', function(req,res){
     
