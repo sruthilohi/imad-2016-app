@@ -48,7 +48,7 @@ button.onclick = function(){
 //submit username and password to login
 
 
-var submit=document.getElementById('submit_btn');
+/*var submit=document.getElementById('submit_btn');
 submit.onclick = function(){
     
    //create a request object
@@ -90,5 +90,5 @@ submit.onclick = function(){
     // make a request to the server and send the name
     
     
-};
+};*/
 
