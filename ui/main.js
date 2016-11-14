@@ -48,7 +48,7 @@ button.onclick = function(){
 //submit username and password to login
 
 
-/*var submit=document.getElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
    //create a request object
@@ -60,14 +60,14 @@ submit.onclick = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             //take some action
             if (request.status === 200){
-                
-                //capture a list of names and render it as a list
-               consle.log('user logged in');
-               alert('logged in sucessfully');
+                submit.value = 'Success!';
+              
                 } else if (request.status===403){
                     alert('username/password is incorrect');
+                    submit.value = 'Login';
                 } else if (request.status===500){
                     alert('something went wrong on the server');
+                    submit.value = 'Login';
                 }
                
                
@@ -82,13 +82,13 @@ submit.onclick = function(){
     console.log(username);
     console.log(password);
     
-   request.open('POST','http://sruthilohi.imad.hasura-app.io/login', true);
+   request.open('POST','/login', true);
     request.setRequestHeader('Content-Type', 'application/json');
       request.send(JSON.stringify({username: username, password:password}));
     
-    
+    submit.value = 'Logging in...';
     // make a request to the server and send the name
     
     
-};*/
+};
 
