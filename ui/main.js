@@ -45,7 +45,7 @@ button.onclick = function(){
     
 };*/
 
-//submit username and password to login
+
 function loadLoginForm(){
     var loginHtml = `
      <h3>login to unlock awesome features</h3>
@@ -54,9 +54,13 @@ function loadLoginForm(){
      <input type = "submit" id="submit_btn" />
      <input type="submit" id="login_btn" value="Login" />
      <input type="submit" id="register_btn" value="Register" />
-                    `;
+       `;
+     document.getElementById('login_area').innerHTML = loginHtml;  
+   
+}   
+     //submit username and password to login
 var submit = document.getElementById('submit_btn');
-}
+
 submit.onclick = function(){
     
    //create a request object
