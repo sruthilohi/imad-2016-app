@@ -87,7 +87,7 @@ submit.onclick = function(){
     request.setRequestHeader('Content-Type', 'application/json');
       request.send(JSON.stringify({username: username, password:password}));
     
-    submit.value = 'Logging in...';
+    //submit.value = 'Logging in...';
     // make a request to the server and send the name
     
     
