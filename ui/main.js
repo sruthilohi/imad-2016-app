@@ -60,14 +60,15 @@ submit.onclick = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             //take some action
             if (request.status === 200){
-                submit.value = 'Success!';
-              
+                console.log('user logged in');
+                alert('logged in successfully');
+               
                 } else if (request.status===403){
                     alert('username/password is incorrect');
-                    submit.value = 'Login';
+                   
                 } else if (request.status===500){
                     alert('something went wrong on the server');
-                    submit.value = 'Login';
+                  
                 }
                
                
@@ -82,7 +83,7 @@ submit.onclick = function(){
     console.log(username);
     console.log(password);
     
-   request.open('POST','/login', true);
+   request.open('POST','http://sruthilohi.imad.hasura-app.io/login', true);
     request.setRequestHeader('Content-Type', 'application/json');
       request.send(JSON.stringify({username: username, password:password}));
     
