@@ -51,7 +51,6 @@ function loadLoginForm(){
      <h3>login to unlock awesome features</h3>
      <input type = "text" id="username" placeholder="username"/>
      <input type = "password" id="password" />
-     <input type = "submit" id="submit_btn" />
      <input type="submit" id="login_btn" value="Login" />
      <input type="submit" id="register_btn" value="Register" />
        `;
