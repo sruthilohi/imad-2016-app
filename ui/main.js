@@ -106,4 +106,4 @@ submit.onclick = function(){
     
 };
 }
-//loadLoginForm ();
+loadLoginForm ();
