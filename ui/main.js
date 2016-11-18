@@ -129,21 +129,35 @@ function loadLoginForm(){
     
     };
 }
+
+
+
 function loadarticles () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
+        var articles = document.getElementById('articles');
         
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
+                var content = '<ul>';
+                
+               var articledata = JSON.parse(this.responseText);
+               for (var i=0; i< articledata.length ; i++){
+                   content +=  `<li> 
+                   <a href="/articles/{articledata[i].title}">${articleData[i].heading}</a>
+                   (${articleData[i].date.split('T')[0]})</li>`;
+                   
+               }
+               content+="</ul>"
+               articles.innerHTML = content;
             } else {
-                loadLoginForm();
+              articles.innerHTML = ('Ooops! could not load all articles');  
             }
         }
     };
     
-    request.open('GET', '/check-login', true);
+    request.open('GET', '/get-articles', true);
     request.send(null);
 }
 
