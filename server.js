@@ -190,20 +190,33 @@ app.get('/check-login', function (req, res) {
    }
 });
 
+/* app.get('/get-articles', function (req, res) {
+   // make a select request
+   // return a response with the results
+   pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));
+      }
+   });
+});
+ */
+
 app.get('/get-articles', function (req, res) {
     
     //query article table
     //return a response with results
     
   
-       pool.query('SELECT * FROM article ORDER BY date DESC', [req.session.auth.userId], function (err, result) {
+       pool.query('SELECT * FROM article ORDER BY date DESC', function (err, result) {
            if (err) {
               res.status(500).send(err.toString());
            } else {
               res.send(JSON.stringify(result.rows));   
            }
        });
-  
+});
 
 app.get('/logout', function (req, res) {
    delete req.session.auth;
