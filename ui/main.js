@@ -106,3 +106,4 @@ submit.onclick = function(){
     
 };
 }
+loadLoginForm ();
