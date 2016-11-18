@@ -57,7 +57,7 @@ function loadLoginForm(){
        `;
      document.getElementById('login_area').innerHTML = loginHtml;  
    
-}   
+   
      //submit username and password to login
 var submit = document.getElementById('submit_btn');
 
@@ -105,4 +105,4 @@ submit.onclick = function(){
     
     
 };
-
+}
