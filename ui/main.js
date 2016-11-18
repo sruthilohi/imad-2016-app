@@ -92,8 +92,7 @@ function loadLoginForm(){
         console.log(password);
         request.open('POST', 'https://sruthilohi.imad.hasura-app.io/login', true);
         request.setRequestHeader('Content-Type', 'application/json');
-    request.send(JSON.stringify({username: username, password: password}));
-     //   request.send(JSON.stringify({username: username, password: password}));  
+        request.send(JSON.stringify({username: username, password: password}));  
         submit.value = 'Logging in...';
         
     };
@@ -119,11 +118,11 @@ function loadLoginForm(){
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        
-        request.open('POST', '/create-user', true);
-        request.setRequestHeader('Content-Type', 'application/json');
         console.log(username);
         console.log(password);
+        request.open('POST', '/create-user', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        
         request.send(JSON.stringify({username: username, password: password}));  
         register.value = 'Registering...';
     
