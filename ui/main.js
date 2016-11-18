@@ -129,7 +129,7 @@ function loadLoginForm(){
     };
 }
 
-/*function loadLogin () {
+function loadLogin () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
@@ -144,5 +144,5 @@ function loadLoginForm(){
     
     request.open('GET', '/check-login', true);
     request.send(null);
-}*/
+}
 loadLoginForm ();
