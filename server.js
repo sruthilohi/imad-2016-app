@@ -108,6 +108,7 @@ var htmltemplate= `
                   <input type="text" id=comments" placeholder="comment"/>
                 <input type="submit" id="submit_btn" value="submit"/>
            </div>
+           <script type="text/javascript" src="/ui/article.js"></script>
   </body>
 </html> 
   
