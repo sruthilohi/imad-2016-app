@@ -1,5 +1,5 @@
 console.log('Loaded!');
-/*var currentArticleTitle = window.location.pathname.split('/')[2];
+var currentArticleTitle = window.location.pathname.split('/')[2];
 function loadCommentForm () {
     var CommentFormHtml = `
         <h5>Submit a comment</h5>
@@ -44,4 +44,4 @@ function loadCommentForm () {
         
     }; 
     
-}*/
+}
