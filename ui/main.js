@@ -131,7 +131,6 @@ function loadLoginForm(){
 }
 
 
-
 function loadarticles () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
@@ -149,7 +148,7 @@ function loadarticles () {
                     <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
-                content += "</ul>"
+                content += "</ul>";
                 articles.innerHTML = content;
             } else {
               articles.innerHTML = ('Ooops! could not load all articles');  
