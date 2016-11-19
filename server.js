@@ -276,7 +276,8 @@ app.get('/articles/:articleName', function(req,res){
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
  // var articlename = req.params.articlename;
-  pool.query('SELECT * from article where title = $1' , [req.params.articleName]  , function(err,result){
+  pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+      
       if(err) {
           res.status(500).send(err.toString());
           
