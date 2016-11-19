@@ -36,10 +36,10 @@ function loadCommentForm () {
         var commet = document.getElementById('comment_text').value;
         
         console.log(comment);
-        request.open('POST', '/login', true);
+        request.open('POST',  '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        submit.value = 'Logging in...';
+        request.send(JSON.stringify({comment: comment}));  
+        submit.value = 'Submitting...';
         
     }; 
     
