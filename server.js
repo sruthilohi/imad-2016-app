@@ -86,7 +86,7 @@ var htmltemplate= `
  
   
   <body>
-             <div  class="container">
+        <div  class="container">
               <div>
                   
                   <a href="/">Home</a>
@@ -104,10 +104,15 @@ var htmltemplate= `
                       
                     ${content}
                   </div>
-                  <hr/>
-                  <input type="text" id=comments" placeholder="comment"/>
-                <input type="submit" id="submit_btn" value="submit"/>
-           </div>
+                 
+             hr/>
+               <h4>Comments</h4>
+            <div id="comment_form">
+              </div>
+              <div id="comments">
+                <center>Loading comments...</center> 
+            </div>
+        </div>
            <script type="text/javascript" src="/ui/article.js"></script>
   </body>
 </html> 
