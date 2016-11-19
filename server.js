@@ -228,7 +228,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
                             if (err) {
                                 res.status(500).send(err.toString());
                             } else {
-                                res.status(200).send('Comment inserted!')
+                                res.status(200).send('Comment inserted!');
                             }
                         });
                 }
@@ -276,7 +276,8 @@ app.get('/articles/:articlename', function(req,res){
     //articlename==article-one
     //articles[articlename]=={} content object for article-one
  // var articlename = req.params.articlename;
-  pool.query("select * from articles where title = $1" , [req.params.articlename]  , function(err,result){
+ // pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+  pool.query('SELECT * from article where title = $1' , [req.params.articleName]  , function(err,result){
       if(err) {
           res.status(500).send(err.toString());
           
