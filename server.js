@@ -105,14 +105,14 @@ function createTemplate (data) {
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
-         
+          </div>
           <script type="text/javascript" src="/ui/article.js"></script>
-           </div>
       </body>
     </html>
     `;
     return htmlTemplate;
 }
+
 var pool = new Pool(config);
 
 function hash(input,salt) {
