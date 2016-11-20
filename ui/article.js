@@ -48,8 +48,7 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-               // loadCommentForm(this.responseText);
-             loadCommentForm();
+                loadCommentForm(this.responseText);
             }
         }
     };
@@ -57,7 +56,6 @@ function loadLogin () {
     request.open('GET', '/check-login', true);
     request.send(null);
 }
-
 
 function escapeHTML (text)
 {
