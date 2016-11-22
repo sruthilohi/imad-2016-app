@@ -273,9 +273,9 @@ app.get('/test-db', function(req,res){
     
 });
 
-/* app.get('/', function (req, res) {
+ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});*/
+});
 
 /*var counter=0;
 app.get('/counter', function(req,res){
@@ -313,9 +313,6 @@ app.get('/articles/:articleName', function(req,res){
   
 });
 
-app.get('/ui/:fileName', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
-});
 
 app.get('/journey', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'journeytrack.html'));
