@@ -69,7 +69,7 @@ function escapeHTML (text)
 
 
 function loadComments () {
-        
+        // Check if the user is already logged in
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -96,6 +96,7 @@ function loadComments () {
     request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
 }
+
  loadLogin ();
   loadComments ();
    loadCommentForm ();
