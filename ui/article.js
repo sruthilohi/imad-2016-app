@@ -11,8 +11,8 @@ function loadCommentForm () {
         <br/>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
-}
-   /* // Submit username/password to login
+
+   // Submit username/password to login
     var submit = document.getElementById('submit');
     submit.onclick = function () {
         // Create a request object
@@ -99,5 +99,5 @@ function loadComments () {
 }
 
  loadLogin ();
-  loadComments (); */
-  loadCommentForm () ;
+  loadComments (); 
+ 
