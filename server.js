@@ -232,7 +232,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
    // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
         // First check if the article exists and get the article-id
-        pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+        pool.query('SELECT * FROM article WHERE title = $1', [req.params.articleName], function (err, result) {
             if (err) {
                 res.status(500).send(err.toString());
             } else {
@@ -273,18 +273,18 @@ app.get('/test-db', function(req,res){
     
 });
 
-app.get('/', function (req, res) {
+/* app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+});*/
 
-var counter=0;
+/*var counter=0;
 app.get('/counter', function(req,res){
 counter=counter+1;
 res.send(counter.toString());
 });
 
 
-/* app.get('/:articleName', function (req, res) {
+ app.get('/:articleName', function (req, res) {
     var articleName = rec.params.articleName;
     
   res.send(createtemplate(articles[articleName]));
@@ -311,6 +311,10 @@ app.get('/articles/:articleName', function(req,res){
       }
   });
   
+});
+
+app.get('/ui/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
 
 app.get('/journey', function (req, res) {
