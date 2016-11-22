@@ -100,4 +100,4 @@ function loadComments () {
 
  loadLogin ();
   loadComments (); */
-  loadCommentForm () 
+  loadCommentForm () ;
