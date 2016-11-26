@@ -14,7 +14,7 @@ function loadArticleForm () {
     document.getElementById('new_article').innerHTML = articleFormHtml;
     
      var newArticle = document.getElementById('new_btn');
-      submit.onclick = function () {
+      newArticle.onclick = function () {
           
         loadArticleForm();  
       };
