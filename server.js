@@ -257,7 +257,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     }
 });
 
-app.get('/test-db', function(req,res){
+/*app.get('/test-db', function(req,res){
     
    //make a select request
     // return a response with result
@@ -271,6 +271,20 @@ app.get('/test-db', function(req,res){
    });
   
     
+});*/
+app.post('/submit-article', function(req,res){
+    var title = req.body.title;
+    var heading = req.body.heading;
+    var content= req.body.content;
+    pool.query('INSERT INTO article (title, heading, date, content, author_id) VALUES ($1, $2, $3, $4, $5)', [title,heading,date.toDateString(),content, req.session.auth.userId ] , function(err,result){
+        if(err){
+        res.status(500).send(err.toString());
+        
+    }  else {
+        res.send('Article sucessfully created :' + username);
+    } 
+        
+    });
 });
 
  app.get('/', function (req, res) {
