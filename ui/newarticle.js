@@ -13,11 +13,11 @@ function loadArticleForm () {
         `;
     document.getElementById('new_article').innerHTML = articleFormHtml;
     
-     var newArticle = document.getElementById('new_btn');
+    /* var newArticle = document.getElementById('new_btn');
       newArticle.onclick = function () {
           
         loadArticleForm();  
-      };
+      };*/
      
     var submit = document.getElementById('ArticleSubmit');
     submit.onclick = function () {
