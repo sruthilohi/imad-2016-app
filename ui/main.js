@@ -128,11 +128,7 @@ function loadLoginForm(){
         register.value = 'Registering...';
     
     };
-     var newArticle = document.getElementById('new_btn');
-      newArticle.onclick = function () {
-          
-        loadArticleForm();  
-      };
+     
      
 }
 
@@ -182,6 +178,7 @@ function loadLogin () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
+                
             } else {
                 loadLoginForm();
             }
