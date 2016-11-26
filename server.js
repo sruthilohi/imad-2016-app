@@ -281,7 +281,7 @@ app.post('/submit-article', function(req,res){
         res.status(500).send(err.toString());
         
     }  else {
-        res.send('Article sucessfully created :' + username);
+        res.send('Article sucessfully created ' );
     } 
         
     });
