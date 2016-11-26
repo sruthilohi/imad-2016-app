@@ -13,7 +13,12 @@ function loadArticleForm () {
         `;
     document.getElementById('new_article').innerHTML = articleFormHtml;
     
-  
+     var newArticle = document.getElementById('new_btn');
+      submit.onclick = function () {
+          
+        loadArticleForm();  
+      };
+     
     var submit = document.getElementById('ArticleSubmit');
     submit.onclick = function () {
         // Create a request object
@@ -43,4 +48,3 @@ function loadArticleForm () {
         
     };
 }
-loadArticleForm();
