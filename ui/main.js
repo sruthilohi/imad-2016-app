@@ -128,13 +128,14 @@ function loadLoginForm(){
         register.value = 'Registering...';
     
     };
-}
- var newArticle = document.getElementById('new_btn');
+     var newArticle = document.getElementById('new_btn');
       newArticle.onclick = function () {
           
         loadArticleForm();  
       };
      
+}
+
 
 function loadarticles () {
     // Check if the user is already logged in
