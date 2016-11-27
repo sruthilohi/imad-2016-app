@@ -272,7 +272,8 @@ app.post('/submit-comment/:articleName', function (req, res) {
   
     
 });*/
-/*app.post('/submit-article', function(req,res){
+app.post('/submit-article', function(req,res){
+ if (req.session && req.session.auth && req.session.auth.userId) {
     var title = req.body.title;
     var heading = req.body.heading;
     var content= req.body.content;
@@ -285,8 +286,11 @@ app.post('/submit-comment/:articleName', function (req, res) {
     } 
         
     });
-});*/
-
+ } else {
+        res.status(403).send('Only logged in users can comment');
+    }
+    
+});
 
  app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
