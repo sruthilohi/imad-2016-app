@@ -327,7 +327,9 @@ app.get('/articles/:articleName', function(req,res){
   });
   
 });
-
+app.get('/article', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
+});
 
 app.get('/journey', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'journeytrack.html'));
