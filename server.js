@@ -272,7 +272,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
   
     
 });*/
-app.post('/submit-article', function(req,res){
+/*app.post('/submit-article', function(req,res){
     var title = req.body.title;
     var heading = req.body.heading;
     var content= req.body.content;
@@ -289,7 +289,7 @@ app.post('/submit-article', function(req,res){
 
  app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+});*/
 
 /*var counter=0;
 app.get('/counter', function(req,res){
