@@ -8,7 +8,7 @@
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
                 if (request.status === 200) {
-                    
+                    alert(' Article published sucessfully'); 
                 } else {
                     alert('Error! Could not submit Article');
                 }
@@ -25,7 +25,9 @@
           console.log(heading);
             console.log(article_text);
         request.setRequestHeader('Content-Type', 'application/json');
+         console.log(JSON.stringify({title:title, heading:heading, content:content  }));
         request.send(JSON.stringify({title:title, heading:heading, content:content  }));  
+       
         submit.value = 'Submitting...';
         
     };
