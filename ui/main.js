@@ -132,12 +132,7 @@ function loadLoginForm(){
      
 }
 
- var newArticle = document.getElementById('new_btn');
-      newArticle.onclick = function () {
-        <a href="ui/article.html"></a>  
-       // loadArticleForm();  
-      }
-      
+ 
 function loadarticles () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
