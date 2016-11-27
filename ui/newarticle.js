@@ -1,21 +1,4 @@
-function loadArticleForm () {
-    var articleFormHtml = `
-        <div>
-                  <a href="/">Home</a>
-        </div>
-        <h5>Submit an Article </h5>
-         <input type = "text" id="title" placeholder="Title"/>
-          <input type = "text" id=heading" placeholder="Heading"/>
-        <textarea id="content_text" rows="5" cols="100" placeholder="Enter your article here..."></textarea>
-        <br/>
-        <input type="submit" id="ArticleSubmit" value="Submit" />
-        <br/>
-        `;
-    document.getElementById('new_article').innerHTML = articleFormHtml;
-    
-    
-     
-    var submit = document.getElementById('ArticleSubmit');
+    var submit = document.getElementById('article_btn');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -43,4 +26,4 @@ function loadArticleForm () {
         submit.value = 'Submitting...';
         
     };
-}
+
