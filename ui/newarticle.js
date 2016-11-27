@@ -8,7 +8,7 @@
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
                 if (request.status === 200) {
-                    alert(' Article published sucessfully'); 
+                    alert(' Article created sucessfully'); 
                 } else {
                     alert('Error! Could not submit Article');
                 }
