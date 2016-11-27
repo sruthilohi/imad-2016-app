@@ -25,6 +25,7 @@
         console.log(title);
           console.log(heading);
             console.log(article_text);
+            console.log(new Date());
         request.setRequestHeader('Content-Type', 'application/json');
          
         request.send(JSON.stringify({title:title, heading:heading, content:content  }));  
