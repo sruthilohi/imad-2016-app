@@ -25,9 +25,9 @@
           console.log(heading);
             console.log(article_text);
         request.setRequestHeader('Content-Type', 'application/json');
-         console.log(JSON.stringify({title:title, heading:heading, content:content  }));
+         
         request.send(JSON.stringify({title:title, heading:heading, content:content  }));  
-       
+       console.log(JSON.stringify({title:title, heading:heading, content:content  }));
         submit.value = 'Submitting...';
         
     };
