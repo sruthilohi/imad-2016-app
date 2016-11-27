@@ -19,7 +19,7 @@
         // Make the request
         var title = document.getElementById('title').value;
          var heading = document.getElementById('heading').value;
-          var content = document.getElementById('content_text').value;
+          var content = document.getElementById('article_text').value;
         request.open('POST', '/submit-article', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({title:title, heading:heading, content:content  }));  
