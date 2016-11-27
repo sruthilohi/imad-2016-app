@@ -20,6 +20,7 @@
         var title = document.getElementById('title').value;
          var heading = document.getElementById('heading').value;
           var content = document.getElementById('article_text').value;
+        
         request.open('POST', '/submit-article', true);
         console.log(title);
           console.log(heading);
