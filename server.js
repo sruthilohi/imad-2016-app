@@ -257,7 +257,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
     }
 });
 
-/*app.get('/test-db', function(req,res){
+app.get('/test-db', function(req,res){
     
    //make a select request
     // return a response with result
@@ -271,7 +271,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
    });
   
     
-});*/
+});
 app.post('/submit-article', function(req,res){
  if (req.session && req.session.auth && req.session.auth.userId) {
     var title = req.body.title;
