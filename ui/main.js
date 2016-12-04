@@ -110,7 +110,7 @@ function loadLoginForm(){
                   alert('User created successfully');
                   register.value = 'Registered!';
                    ClearFields();
-                 
+                 register.value = 'Register';
                  
               } else {
                   alert('Could not register the user');
