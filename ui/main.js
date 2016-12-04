@@ -108,8 +108,8 @@ function loadLoginForm(){
              
               if (request.status === 200) {
                   alert('User created successfully');
-                  document.getElementById('username').value = '';
-                 document.getElementById('password').value = '';
+                  document.getElementById('username').value = "";
+                 document.getElementById('password').value = "";
                   register.value = 'Registered!';
                  
                  
@@ -135,9 +135,10 @@ function loadLoginForm(){
      
      
 }
-function clearTxt(){
-    
-    
+function ClearFields() {
+
+     document.getElementById('username').value = "";
+     document.getElementById('password').value = "";
 }
  
 function loadarticles () {
