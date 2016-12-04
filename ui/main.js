@@ -115,6 +115,7 @@ function loadLoginForm(){
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
+                  ClearFields();
               }
           }
         };
