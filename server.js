@@ -129,9 +129,33 @@ app.get('/hash/:input', function(req,res){
    var hashedstring = hash(req.params.input,'this-is-a-random-string');
    res.send(hashedstring);
 });
+
+/*
+app.post('/create-user', function (req, res) {
+      var username = req.body.username;
+      var password = req.body.password;
+      if(!username.trim() || !password.trim()){
+           res.status(400).send('Username or password field blank.');   //Err if blank,tabs and space detected.
+       } else{
+            var salt = crypto.randomBytes(128).toString('hex');
+            var dbString = hash(password, salt);
+            pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username, dbString], function (err, result) {
+        if(err) {
+           res.status(500).send(err.toString());
+        } else {
+           res.send('User successfully created: ' + username);
+        }
+      });
+     }
+});
+*/
+
 app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
+     if(!username.trim() || !password.trim()){
+           res.status(400).send("Username/password field can't be blank.");   //Err if blank,tabs and space detected.
+       } else{
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password, salt); 
     pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username,dbstring] , function(err,result){
@@ -143,6 +167,7 @@ app.post('/create-user', function(req,res){
     } 
         
     });
+       }
 });
 app.post('/login', function (req, res) {
    var username = req.body.username;
