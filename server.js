@@ -135,9 +135,9 @@ app.get('/hash/:input', function(req,res){
 app.post('/create-user', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-     if(!username.trim() || !password.trim()){
-           res.status(400).send("Username/password field can't be blank.");   //Err if blank,tabs and space detected.
-       } else{
+    // if(!username.trim() || !password.trim()){
+         //  res.status(400).send("Username/password field can't be blank.");   //Err if blank,tabs and space detected.
+     //  } else{
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password, salt); 
     pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username,dbstring] , function(err,result){
@@ -149,7 +149,7 @@ app.post('/create-user', function(req,res){
     } 
         
     });
-       }
+   //    }
 });
 app.post('/login', function (req, res) {
    var username = req.body.username;
