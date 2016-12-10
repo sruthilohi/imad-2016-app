@@ -55,7 +55,10 @@ function loadLoginForm(){
    <button type="button"  id="login_btn" class="btn btn-info">
     <span class="glyphicon glyphicon-user"></span>Login
   </button>
-        <input type="submit" id="register_btn" value="Register" />
+   <button type="button"  id="register_btn" class="btn btn-info">
+    <span class="glyphicon "></span>Register
+  </button>
+       
        `;
      document.getElementById('login_area').innerHTML = loginHtml;  
    
