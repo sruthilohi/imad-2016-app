@@ -52,9 +52,10 @@ function loadLoginForm(){
      <input type = "text" id="username" placeholder="username"/>
      <input type = "password" id="password" />
      <br/><br/>
-    <input type="submit" id="login_btn"   <span class="glyphicon glyphicon-user"> </span> />
-    
-     <input type="submit" id="register_btn" value="Register" />
+   <button type="button"  id="login_btn" class="btn btn-info">
+    <span class="glyphicon glyphicon-user"></span> Search
+  </button>
+        <input type="submit" id="register_btn" value="Register" />
        `;
      document.getElementById('login_area').innerHTML = loginHtml;  
    
