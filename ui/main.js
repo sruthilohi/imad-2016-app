@@ -178,7 +178,7 @@ function loadLoggedInUser (username) {
     `;
     var newArticle = document.getElementById('new_article');
     newArticle.innerHTML = `
-         <a href="/article">New article</a>
+         <a href="/article">New Article</a>
     `;
     
 }
