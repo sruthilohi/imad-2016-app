@@ -101,7 +101,7 @@ function createTemplate (data) {
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
               <li><a href="#">Personal</a></li>
                <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
