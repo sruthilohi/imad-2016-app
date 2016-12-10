@@ -176,11 +176,11 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3>
         <a href="/logout">Logout</a>
     `;
- /*  var newArticle = document.getElementById('new_article');
+    var newArticle = document.getElementById('new_article');
     newArticle.innerHTML = `
          <a href="/article">New article</a>
-    `
-    ;*/
+    `;
+    
 }
 
 
