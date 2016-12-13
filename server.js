@@ -122,10 +122,8 @@ function createTemplate (data) {
               <div>
                   ${date.toDateString()}
               </div>
-              <div class="well well-sm"> ${content}</div>
-            /*  <div>
-                ${content}
-              </div> */
+              <div class="well"> ${content}</div>
+           
               <hr/>
               <h4>Comments</h4>
               <div id="comment_form">
