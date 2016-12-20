@@ -183,11 +183,11 @@ function loadLoggedInUser (username) {
     `;
     var newArticle = document.getElementById('new_article');
     newArticle.innerHTML = `
-         <a href="/article">New Article</a>
+         <strong><a href="/article">New Article</a></strong><br> 
     `;
     
 }
-
+<strong>Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.</strong><br> 
 
 function loadLogin () {
     // Check if the user is already logged in
