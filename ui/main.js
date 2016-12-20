@@ -187,7 +187,7 @@ function loadLoggedInUser (username) {
     `;
     
 }
-<strong>Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.</strong><br> 
+
 
 function loadLogin () {
     // Check if the user is already logged in
