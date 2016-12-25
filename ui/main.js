@@ -174,7 +174,6 @@ function loadarticles () {
     request.open('GET', '/get-articles', true);
     request.send(null);
 } 
-
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
@@ -183,7 +182,7 @@ function loadLoggedInUser (username) {
     `;
     var newArticle = document.getElementById('new_article');
     newArticle.innerHTML = `
-         <strong><a href="/article">New Article</a></strong><br> 
+         <strong><a  href="/article"><h3 class="bg-info">New Article<h3></a></strong><br> 
     `;
     
 }
