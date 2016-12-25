@@ -182,7 +182,7 @@ function loadLoggedInUser (username) {
     `;
     var newArticle = document.getElementById('new_article');
     newArticle.innerHTML = `
-         <strong><a  href="/article"><h3>New Article<h3></a></strong><br> 
+         <strong><a  href="/article"><h3>New Article<h3></a></strong> 
     `;
     
 }
