@@ -160,7 +160,7 @@ function loadarticles () {
                var articleData = JSON.parse(this.responseText);
                for (var i=0; i< articleData.length ; i++){
                    content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
+                    <a href="/articles/${articleData[i].title}"><h5>${articleData[i].heading}</h5></a>
                     (${articleData[i].date.split('T')[0]})</li>`;
                 }
                 content += "</ul>";
